@@ -1,0 +1,17 @@
+import random
+
+game = ["rock","paper","scissors"]
+
+user = input("Choose rock/paper/scissors: ")
+comp = random.randint(0,2)
+
+print("Computer:", game[comp])
+
+if user == game[comp]:
+    print("Tie")
+elif (user=="rock" and game[comp]=="scissors") or \
+     (user=="paper" and game[comp]=="rock") or \
+     (user=="scissors" and game[comp]=="paper"):
+    print("You Win")
+else:
+    print("You Lose")
